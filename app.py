@@ -1,13 +1,15 @@
 import streamlit as st
 import pickle
 import pandas as pd
-import numpy as np
+import os
 
-# Load the saved model pipeline
-model_path = "catboost_model_pipeline.pkl"
+# Use a relative path
+model_path = os.path.join(os.getcwd(), 'models', 'catboost_model_pipeline.pkl')
 
+# Load the model
 with open(model_path, "rb") as model_file:
     pipeline = pickle.load(model_file)
+
 
 # Feature info
 numeric_features_info = {
