@@ -4,7 +4,8 @@ import pandas as pd
 import numpy as np
 
 # Load the saved model pipeline
-model_path = "/Users/user/Desktop/CreditScoreClassification/catboost_model_pipeline.pkl"
+model_path = "catboost_model_pipeline.pkl"
+
 with open(model_path, "rb") as model_file:
     pipeline = pickle.load(model_file)
 
